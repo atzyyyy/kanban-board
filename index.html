@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban Board</title>
+</head>
+
+<body>
+    <header>
+        <h2>Kanban Board</h2>
+        <form action="" id="form-task">
+            <input type="text" id="task" class="form-control" placeholder="What needs to be done?">
+            <select name="status" id="status">
+                <option value="backlog">Backlog</option>
+                <option value="todo">To-do</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Done</option>
+            </select>
+            <button type="submit" onclick="createTask()">Add</button>
+        </form> 
+    </header>
+    <main>
+        <section>
+            <h2>Backlogs</h2>
+            <div id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </section>
+        <section>
+            <h2>To-do</h2>
+            <div id="todo" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </section>
+        <section>
+            <h2>In Progress</h2>
+            <div id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </section>
+        <section>
+            <h2>Done</h2>
+            <div id="done" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </section>
+    </main>
+</body>
+
+</html>
